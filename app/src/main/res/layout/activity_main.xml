@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="minasedrak.ray7.MainActivity">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:id="@+id/googleMapFragment" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:background="#80FFFFFF">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+            android:id="@+id/fromPlaceFragment"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+           />
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+            android:id="@+id/toPlaceFragment"
+            android:layout_below="@id/fromPlaceFragment"
+            android:layout_alignParentLeft="true"
+
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp">
+
+            <Button
+                android:text="Traffic "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/showTrafficBtn"
+                android:background="@drawable/button"
+                android:textColor="#FFFFFF"
+                android:drawableLeft="@mipmap/ic_traffic_white_24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                />
+
+            <Button
+                android:text="route"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/showRouteBtn"
+                android:background="@drawable/button"
+                android:textColor="#FFFFFF"
+                android:drawableLeft="@mipmap/ic_directions_white_24dp"
+                android:layout_centerHorizontal="true"
+                />
+
+
+
+            <Button
+                android:text="Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/showDateAndTimeBtn"
+                android:background="@drawable/button"
+                android:textColor="#FFFFFF"
+                android:drawableLeft="@mipmap/ic_alarm_white_24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
